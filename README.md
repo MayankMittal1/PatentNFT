@@ -1,68 +1,46 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">PatentNFT</h1>
+<p align="center"><img src="https://i.imgur.com/GAJdSUA.png" width="20%"></p>
+<p align="center" >Make modifyable NFTs as a proof of the ownership of idea. Think now, publicise later!</p>
+<p align="center" ><a href="https://patent.sckr.me">https://patent.sckr.me</a></p>
 
-## Available Scripts
+## Problem Statement
 
-In the project directory, you can run:
+Suppose you have an idea - for example a startup idea. You get pretty excited for it - but you don't want to tell the world about your idea right now, not before you actually make a product out of it. This time period between first ideation and product release is a crucial time - where you cannot afford your idea to be released in public. But if it does get leaked to the world and someone else steals your idea - how helpful would it be to have a way to prove the world that you were the one who thought about it first? This problem is not just limited to corporate scene, but might also happen in academia too. We introduce PatentNFTs to solve this problem.
 
-### `npm start`
+## Enter PatentNFT
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+PatentNFT helps such ideators by letting them add a "proof of idea" on the blockchain as a unique token without actually adding their idea in clear on it. When the ideator decides to publicise the idea, they can prove that they thought about the idea back (when they uploaded the proof) using the proof existing on the blockchain. PatentNFT provides two guarantees -
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+1. When the ideator uploads the proof of idea, no-one can fetch the original idea just from the proof stored on the blockchain. The idea is not stored in plain on the chain before it is being made public.
+2. When the ideator tries to make their idea public, they cannot cheat by uploading a different idea than what they thought about back.
 
-### `npm test`
+These two guarantees cater to both the ideator and general public by keeping the idea secret and proving only valid ideas.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technology
 
-### `npm run build`
+The backbone of this project is [Cryptographic Commitment Schemes](https://en.wikipedia.org/wiki/Commitment_scheme). These protocols allow us to commit to some data without revealing the data, and revealing the data later. We use blockchain to prove the "time" of idea. If the proof of idea exists on a block, the it proves that the idea was thought about before the creation time of block. Other than these protocols, we used [Solana](https://solana.com) as the choice of blockchain, with frontend written in [React.js](https://reactjs.org) using the [Chakra UI Framework](http://chakra-ui.com/).
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Screenshots
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+![](https://i.imgur.com/lum1dxc.png)
+<p align="center" >Landing page</p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![](https://i.imgur.com/Y7SptuT.png)
+<p align="center" >Idea creation form</p>
 
-### `npm run eject`
+![](https://i.imgur.com/dZapEFX.png)
+<p align="center" >Idea page when idea is private</p>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![](https://i.imgur.com/8282ozD.png)
+<p align="center" >Idea page when idea is public</p>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![](https://i.imgur.com/Qs7LEiz.png)
+<p align="center" >Explore page to see public ideas of other people</p>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Team
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+1. Mayank Mittal ([@MayankMittal1](http://github.com/MayankMittal1/))
+2. Pragyansh Chaturvedi ([@r41k0u](https://github.com/r41k0u))
+3. Aman Gupta
+4. Shreyaa Sharma ([@cypherean](http://github.com/cypherean))
+5. Kanav Gupta ([@kanav99](https://github.com/kanav99))
