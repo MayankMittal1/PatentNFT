@@ -58,11 +58,7 @@ export const NewForm = () => {
 
     const newAccountPubkey = await PublicKey.createWithSeed(
       publicKey,
-<<<<<<< HEAD
-      seed ,
-=======
       hash.substr(0, 10),
->>>>>>> dd7ffa025638425901878d3bd3397480c4718b7b
       program_id
     );
 
@@ -73,11 +69,7 @@ export const NewForm = () => {
     const instruction = SystemProgram.createAccountWithSeed({
       fromPubkey: publicKey,
       basePubkey: publicKey,
-<<<<<<< HEAD
-      seed: seed,//remove the hash and use seed as the name of nft so that it is different everytime
-=======
       seed: hash.substr(0, 10),
->>>>>>> dd7ffa025638425901878d3bd3397480c4718b7b
       newAccountPubkey: newAccountPubkey,
       lamports: lamports,
       space: IntellectualProperty_Size,
